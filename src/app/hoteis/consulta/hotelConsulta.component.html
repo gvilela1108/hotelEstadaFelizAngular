@@ -1,0 +1,50 @@
+<div> 
+    <a class="btn-floating btn-sm blue waves-effect waves-light" (click)="novo();">
+        <i class="fa fa-plus-circle"> Novo Hotel</i>
+    </a>
+    
+</div>
+<table mdbTable striped="true">
+    <thead class="black white-text">
+    <tr>
+        <th>#</th>
+        <th>CNPJ</th>
+        <th>Nome</th>
+        <th>Cep</th>
+        <th>Logradouro</th>
+        <th>Complemento</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>UF</th>
+        <th>Telefone</th>        
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let hotel of hoteis; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ hotel.cnpj }}</td>
+            <td>{{ hotel.nome }}</td>
+            <td>{{hotel.endereco.cep}}</td> 
+            <td>{{hotel.endereco.logradouro}}</td>                    
+            <td>{{ hotel.endereco.complemento }}</td>
+            <td>{{ hotel.endereco.bairro }}</td>
+            <td>{{ hotel.endereco.cidade }}</td>
+            <td>{{ hotel.endereco.estado }}</td>
+            <td>{{ hotel.telefone }}</td>
+            <td>
+                <a class="btn-floating btn-sm yellow waves-effect waves-light" (click)="editar(hotel.cnpj);">
+                    <i class="fa fa-pencil"> Editar</i> 
+                </a>  
+            </td>         
+            <td>
+                <a class="btn-floating btn-sm red waves-effect waves-light" (click)="excluir(hotel.cnpj, i);">
+                    <i class="fa fa-minus-circle"> Excluir</i>
+                </a>
+                
+        </tr>
+    </tbody>
+    
+</table>

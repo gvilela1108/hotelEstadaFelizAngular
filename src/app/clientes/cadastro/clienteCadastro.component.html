@@ -1,0 +1,59 @@
+<center><label for="txTitulo">Dados Clientes</label>
+<form (ngSubmit)="onSave()">
+        <div class="form-group">
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtCPFCliente">CPF</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.cpf" id="txtCPFCliente" name="txtCPFCliente" placeholder="999.999.999-99">
+              </div>
+              <div class="col-md-9">
+                  <label for="txtNomeCliente">Nome</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.nome" id="txtNomeCliente" name="txtNomeCliente" placeholder="Digite o nome completo">
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtCEPCliente">CEP</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.endereco.cep" id="txtCEPCliente"  name="txtCEPCliente" placeholder="Ex: 9999-99">
+              </div>
+              <div class="col-md-9">
+                  <label for="txtEnderecoCliente">Logradouro</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.endereco.logradouro" id="txtEnderecoCliente" name="txtEnderecoCliente" placeholder="Ex: Av. Brasil, 123">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtComplementoCliente">Complemento</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.endereco.complemento" id="txtComplementoCliente" name="txtComplementoCliente" placeholder="Ex: ap 01 bl A">
+              </div>
+              <div class="col-md-3">
+                  <label for="txtBairroCliente">Bairro</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.endereco.bairro" id="txtBairroCliente" name="txtBairroCliente" placeholder="Ex: Centro">
+              </div>  
+              <div class="col-md-3">
+                  <label for="txtCidadeCliente">Cidade</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.endereco.cidade" id="txtCidadeCliente" name="txtCidadeCliente" placeholder="Ex: São Paulo">
+              </div>     					
+              <div class="col-md-3">
+                  <label for="txtUFCliente">Estado</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.endereco.estado" id="txtEstadoCliente" name="txtEstadoCliente" placeholder="Ex: São Paulo">					
+              </div>
+    
+          </div>
+        
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtTelefoneCliente">Telefone</label>
+                  <input type="text" class="form-control" [(ngModel)]="clientesModel.telefone" id="txtTelefoneCliente" name="txtTelefoneCliente"  placeholder="(99)99999-9999">
+              </div>
+              <div class="col-md-9">
+                  <label for="txtEmailCliente">E-mail</label>
+                  <input type="email" class="form-control" [(ngModel)]="clientesModel.email" id="txtEmailCliente" name="txtEmailCliente" placeholder="Ex: nome@email.com">
+              </div>                    
+          </div>
+          
+      </div>
+      <button type="submit" class="btn btn-success">Salvar</button>        
+    </form></center>

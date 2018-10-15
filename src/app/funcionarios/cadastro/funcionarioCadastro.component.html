@@ -1,0 +1,74 @@
+<center><label for="txTitulo">Dados Funcionarios</label>
+    <form (ngSubmit)="onSave()">
+            <div class="form-group">
+              <div class="row">
+                  <div class="col-md-3">
+                      <label for="txtCPFFuncionario">CPF</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.cpf" id="txtCPFFuncionario" name="txtCPFFuncionario">
+                  </div>
+                  <div class="col-md-9">
+                      <label for="txtNomeFuncionario">Nome</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.nome" id="txtNomeFuncionario" name="txtNomeFuncionario">
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="row">
+                  <div class="col-md-3">
+                      <label for="txtCEPFuncionario">CEP</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.endereco.cep" id="txtCEPFuncionario"  name="txtCEPFuncionario" >
+                  </div>
+                  <div class="col-md-9">
+                      <label for="txtEnderecoFuncionario">Logradouro</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.endereco.logradouro" id="txtEnderecoFuncionario" name="txtEnderecoFuncionario" >
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-3">
+                      <label for="txtComplementoFuncionario">Complemento</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.endereco.complemento" id="txtComplementoFuncionario" name="txtComplementoFuncionario" >
+                  </div>
+                  <div class="col-md-3">
+                      <label for="txtBairroFuncionario">Bairro</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.endereco.bairro" id="txtBairroFuncionario" name="txtBairroFuncionario">
+                  </div>  
+                  <div class="col-md-3">
+                      <label for="txtCidadeFuncionario">Cidade</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.endereco.cidade" id="txtCidadeFuncionario" name="txtCidadeFuncionario" >
+                  </div>     					
+                  <div class="col-md-3">
+                      <label for="txtUFFuncionario">Estado</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.endereco.estado" id="txtEstadoFuncionario" name="txtEstadoFuncionario">					
+                  </div>
+        
+              </div>
+            
+              <div class="row">
+                  <div class="col-md-3">
+                      <label for="txtTelefoneFuncionario">Telefone</label>
+                      <input type="text" class="form-control" [(ngModel)]="funcionariosModel.telefone" id="txtTelefoneFuncionario" name="txtTelefoneFuncionario"  >
+                  </div>
+                  <div class="col-md-9">
+                      <label for="txtEmailFuncionario">E-mail</label>
+                      <input type="email" class="form-control" [(ngModel)]="funcionariosModel.email" id="txtEmailFuncionario" name="txtEmailFuncionario" >
+                  </div>                    
+              </div>
+              
+              <div class="row">
+                <div class="col-md-3">
+                    <label for="txtTelefoneFuncionario">Senha</label>
+                    <input type="password" class="form-control" [(ngModel)]="funcionariosModel.senha" id="txtSenhaFuncionario" name="txtSenhaFuncionario"  >
+                </div>
+                <div class="col-md-9">
+                    <label for="txtEmailFuncionario">Salario</label>
+                    <input type="text" class="form-control" [(ngModel)]="funcionariosModel.salario" id="txtSalarioFuncionario" name="txtSalarioFuncionario" >
+                </div>       
+                <div class="col-md-9">
+                    <label for="txtEmailFuncionario">Tipo Funcionario</label>
+                    <input type="text" class="form-control" [(ngModel)]="funcionariosModel.tipoFuncionario" id="txtTipoFuncionario" name="txtTipoFuncionario">
+                </div>                  
+            </div>
+              
+          </div>
+          <button type="submit" class="btn btn-success">Salvar</button>        
+        </form></center>

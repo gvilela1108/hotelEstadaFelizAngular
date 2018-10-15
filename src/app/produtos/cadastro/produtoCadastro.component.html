@@ -1,0 +1,34 @@
+<center><label for="txTitulo">Dados Produtos</label>
+<form (ngSubmit)="onSave()">
+        <div class="form-group">
+          <div class="row">
+              <div class="col-md-9">
+                  <label for="txtNomeProduto">Nome</label>
+                  <input type="text" class="form-control" [(ngModel)]="produtosModel.nome" id="txtNomeProduto" name="txtNomeProduto">
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtPrecoProduto">Preço</label>
+                  <input type="text" class="form-control" [(ngModel)]="produtosModel.preco" id="txtPrecoProduto"  name="txtPrecoProduto">
+              </div>
+              <div class="col-md-9">
+                  <label for="txtDescProduto">Descrição</label>
+                  <input type="text" class="form-control" [(ngModel)]="produtosModel.descricao" id="txtDescProduto" name="txtDescProduto">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtStatusProduto">Status</label>
+                  <input type="text" class="form-control" [(ngModel)]="produtosModel.status" id="txtStatusProduto" name="txtStatusProduto">
+              </div>
+              <div class="col-md-3">
+                  <label for="txtQuantidadeProduto">Quantidade</label>
+                  <input type="text" class="form-control" [(ngModel)]="produtosModel.quantidade" id="txtQuantidadeProduto" name="txtQuantidadeProduto">
+              </div>             
+            </div>
+      </div>
+      <button type="submit" class="btn btn-success">Salvar</button>        
+    </form></center>

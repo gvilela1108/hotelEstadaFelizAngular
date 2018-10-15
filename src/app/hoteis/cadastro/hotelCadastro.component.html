@@ -1,0 +1,55 @@
+<center><label for="txTitulo">Dados Hotel</label>
+<form (ngSubmit)="onSave()">
+        <div class="form-group">
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtCNPJHotel">CNPJ</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.cnpj" id="txtCNPJHotel" name="txtCNPJHotel">
+              </div>
+              <div class="col-md-9">
+                  <label for="txtNomeHotel">Nome</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.nome" id="txtNomeHotel" name="txtNomeHotel" >
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtCEPHotel">CEP</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.endereco.cep" id="txtCEPHotel"  name="txtCEPHotel" >
+              </div>
+              <div class="col-md-9">
+                  <label for="txtEnderecoHotel">Logradouro</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.endereco.logradouro" id="txtEnderecoHotel" name="txtEnderecoHotel" placeholder="Ex: Av. Brasil, 123">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtComplementoHotel">Complemento</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.endereco.complemento" id="txtComplementoHotel" name="txtComplementoHotel" placeholder="Ex: ap 01 bl A">
+              </div>
+              <div class="col-md-3">
+                  <label for="txtBairroHotel">Bairro</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.endereco.bairro" id="txtBairroHotel" name="txtBairroHotel" placeholder="Ex: Centro">
+              </div>  
+              <div class="col-md-3">
+                  <label for="txtCidadeHotel">Cidade</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.endereco.cidade" id="txtCidadeHotel" name="txtCidadeHotel" placeholder="Ex: São Paulo">
+              </div>     					
+              <div class="col-md-3">
+                  <label for="txtUFHotel">Estado</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.endereco.estado" id="txtEstadoHotel" name="txtEstadoHotel" placeholder="Ex: São Paulo">					
+              </div>
+    
+          </div>
+        
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtTelefoneHotel">Telefone</label>
+                  <input type="text" class="form-control" [(ngModel)]="hoteisModel.telefone" id="txtTelefoneHotel" name="txtTelefoneHotel"  placeholder="(99)99999-9999">
+              </div>                  
+          </div>
+          
+      </div>
+      <button type="submit" class="btn btn-success">Salvar</button>        
+    </form></center>

@@ -1,0 +1,52 @@
+<div> 
+    <a class="btn-floating btn-sm blue waves-effect waves-light" (click)="novo();">
+        <i class="fa fa-plus-circle"> Nova Hospedagem</i>
+    </a>
+    
+</div>
+<table mdbTable striped="true">
+    <thead class="black white-text">
+    <tr>
+        <th>#</th>
+        <th>Id Cliente</th>
+        <th>Id Hotel</th>
+        <th>Id Quarto</th>
+        <th>Id Produto</th>
+        <th>Nome Produto</th>
+        <th>Qtd Consumida</th>
+        <th>Preco Total</th>
+        <th>Data Consumo</th>
+        <th>Checkin</th>
+        <th>Checkout</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let hospedagem of hospedagens; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ hospedagem.idCliente }}</td>
+            <td>{{ hospedagem.idHotel }}</td>
+            <td>{{hospedagem.idQuarto}}</td> 
+            <td>{{hospedagem.consumo.idProduto}}</td>                    
+            <td>{{ hospedagem.consumo.nomeProduto }}</td>
+            <td>{{ hospedagem.consumo.quantidadeConsumida }}</td>
+            <td>{{ hospedagem.consumo.precoTotal }}</td>
+            <td>{{ hospedagem.consumo.dataConsumo }}</td>
+            <td>{{ hospedagem.checkin }}</td>
+            <td>{{ hospedagem.checkout }}</td>
+            <td>
+                <a class="btn-floating btn-sm yellow waves-effect waves-light" (click)="editar(hospedagem.idCliente,hospedagem.idHotel,hospedagem.idQuarto);">
+                    <i class="fa fa-pencil"> Editar</i> 
+                </a>  
+            </td>         
+            <td>
+                <a class="btn-floating btn-sm red waves-effect waves-light" (click)="excluir(hospedagem.idCliente,hospedagem.idHotel,hospedagem.idQuarto, i);">
+                    <i class="fa fa-minus-circle"> Excluir</i>
+                </a>
+                
+        </tr>
+    </tbody>
+    
+</table>

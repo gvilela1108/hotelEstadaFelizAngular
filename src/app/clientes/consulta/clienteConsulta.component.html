@@ -1,0 +1,52 @@
+<div> 
+    <a class="btn-floating btn-sm blue waves-effect waves-light" (click)="novo();">
+        <i class="fa fa-plus-circle"> Novo Cliente</i>
+    </a>
+
+</div>
+<table mdbTable striped="true">
+    <thead class="black white-text">
+    <tr>
+        <th>#</th>
+        <th>CPF</th>
+        <th>Nome</th>
+        <th>Cep</th>
+        <th>Logradouro</th>
+        <th>Complemento</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>UF</th>
+        <th>Telefone</th>
+        <th>Email</th>          
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+ 
+    <tbody>
+        <tr *ngFor="let cliente of clientes; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ cliente.cpf }}</td>
+            <td>{{ cliente.nome }}</td>
+            <td>{{cliente.endereco.cep}}</td> 
+            <td>{{cliente.endereco.logradouro}}</td>                    
+            <td>{{ cliente.endereco.complemento }}</td>
+            <td>{{ cliente.endereco.bairro }}</td>
+            <td>{{ cliente.endereco.cidade }}</td>
+            <td>{{ cliente.endereco.estado }}</td>
+            <td>{{ cliente.telefone }}</td>
+            <td>{{ cliente.email }}</td>
+            <td>
+                <a class="btn-floating btn-sm yellow waves-effect waves-light" (click)="editar(cliente.cpf);">
+                    <i class="fa fa-pencil"> Editar</i> 
+                </a>  
+            </td>         
+            <td>
+                <a class="btn-floating btn-sm red waves-effect waves-light" (click)="excluir(cliente.cpf, i);">
+                    <i class="fa fa-minus-circle"> Excluir</i>
+                </a>
+                
+        </tr>
+    </tbody>
+    
+</table>

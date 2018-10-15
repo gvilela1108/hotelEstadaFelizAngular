@@ -1,0 +1,60 @@
+<center><label for="txTitulo">Dados Hotel</label>
+<form (ngSubmit)="onSave()">
+        <div class="form-group">
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtIdClientehospedagens">Id Cliente</label>
+                  <input type="text" class="form-control" [(ngModel)]="hospedagensModel.idCliente" id="txtIdClientehospedagens" name="txtIdClientehospedagens">
+              </div>
+              <div class="col-md-3">
+                  <label for="txtIdHotelhospedagens">Id Hotel</label>
+                  <input type="text" class="form-control" [(ngModel)]="hospedagensModel.idHotel" id="txtIdHotelhospedagens" name="txtIdHotelhospedagens" >
+              </div>
+              <div class="col-md-3">
+                <label for="txtIdQuartoHotel">Id Quarto</label>
+                <input type="text" class="form-control" [(ngModel)]="hospedagensModel.idQuarto" id="txtIdQuartoHotel"  name="txtIdQuartoHotel" >
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="row">
+
+              <div class="col-md-9">
+                  <label for="txtIdProdutoHotel">Id Produto</label>
+                  <input type="text" class="form-control" [(ngModel)]="hospedagensModel.consumo.idProduto" id="txtIdProdutoHotel" name="txtIdProdutoHotel">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtNomeProdutoHotel">Nome Produto</label>
+                  <input type="text" class="form-control" [(ngModel)]="hospedagensModel.consumo.nomeProduto" id="txtNomeProdutoHotel" name="txtNomeProdutoHotel">
+              </div>
+              <div class="col-md-3">
+                  <label for="txtQtdHotel">Quantidade Consumida</label>
+                  <input type="text" class="form-control" [(ngModel)]="hospedagensModel.consumo.quantidadeConsumida" id="txtQtdHotel" name="txtQtdHotel">
+              </div>  
+              <div class="col-md-3">
+                  <label for="txtPrecoHotel">Preco Total</label>
+                  <input type="text" class="form-control" [(ngModel)]="hospedagensModel.consumo.precoTotal" id="txtPrecoHotel" name="txtPrecoHotel">
+              </div>     					
+              <div class="col-md-3">
+                  <label for="txtDataConsumoHotel">Data Consumo</label>
+                  <input type="text" class="form-control" [(ngModel)]="hospedagensModel.consumo.dataConsumo" id="txtDataConsumoHotel" name="txtDataConsumoHotel">					
+              </div>
+    
+          </div>
+        
+          <div class="row">
+              <div class="col-md-3">
+                  <label for="txtCheckinHotel">Checkin</label>
+                  <input type="text" class="form-control" [(ngModel)]="hospedagensModel.checkin" id="txtCheckinHotel" name="txtCheckinHotel"  >
+              </div>   
+              <div class="col-md-3">
+                <label for="txtCheckoutHotel">Checkout</label>
+                <input type="text" class="form-control" [(ngModel)]="hospedagensModel.checkout" id="txtCheckoutHotel" name="txtCheckoutHotel"  >
+            </div>                                 
+          </div>
+          
+      </div>
+      <button type="submit" class="btn btn-success">Salvar</button>        
+    </form></center>

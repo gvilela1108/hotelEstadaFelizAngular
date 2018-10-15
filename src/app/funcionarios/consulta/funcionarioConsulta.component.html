@@ -1,0 +1,60 @@
+<div> 
+    <a class="btn-floating btn-sm blue waves-effect waves-light" (click)="novo();">
+        <i class="fa fa-plus-circle"> Novo Funcionario</i>
+    </a>
+
+</div>
+<table mdbTable striped="true">
+    <thead class="black white-text">
+    <tr>
+        <th>#</th>
+        <th>CPF</th>
+        <th>Nome</th>
+        <th>Cep</th>
+        <th>Logradouro</th>
+        <th>Complemento</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>UF</th>
+        <th>Telefone</th>
+        <th>Email</th>  
+		<th>Salario</th> 
+		<th>Tipo Funcionario</th> 
+		<th>Senha</th> 
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+ 
+    <tbody>
+        <tr *ngFor="let funcionario of funcionarios; let i = index">
+            
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ funcionario.cpf }}</td>
+            <td>{{ funcionario.nome }}</td>
+            <td>{{funcionario.endereco.cep}}</td> 
+            <td>{{funcionario.endereco.logradouro}}</td>                    
+            <td>{{ funcionario.endereco.complemento }}</td>
+            <td>{{ funcionario.endereco.bairro }}</td>
+            <td>{{ funcionario.endereco.cidade }}</td>
+            <td>{{ funcionario.endereco.estado }}</td>
+            <td>{{ funcionario.telefone }}</td>
+            <td>{{ funcionario.email }}</td>
+			<td>{{ funcionario.salario }}</td>
+			<td>{{ funcionario.tipoFuncionario }}</td>
+			<td>{{ funcionario.senha }}</td>
+			
+            <td>
+                <a class="btn-floating btn-sm yellow waves-effect waves-light" (click)="editar(funcionario.cpf);">
+                    <i class="fa fa-pencil"> Editar</i> 
+                </a>  
+            </td>         
+            <td>
+                <a class="btn-floating btn-sm red waves-effect waves-light" (click)="excluir(funcionario.cpf, i);">
+                    <i class="fa fa-minus-circle"> Excluir</i>
+                </a>
+                
+        </tr>
+    </tbody>
+    
+</table>

@@ -1,0 +1,42 @@
+<div> 
+    <a class="btn-floating btn-sm blue waves-effect waves-light" (click)="novo();">
+        <i class="fa fa-plus-circle"> Novo Produto</i>
+    </a>
+
+</div>
+<table mdbTable striped="true">
+    <thead class="black white-text">
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Descrição</th>
+        <th>Status</th>
+        <th>Quantidade</th>    
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+ 
+    <tbody>
+        <tr *ngFor="let produto of produtos; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ produto.nome }}</td>
+            <td>{{produto.preco}}</td> 
+            <td>{{produto.descricao}}</td>                    
+            <td>{{ produto.status }}</td>
+            <td>{{ produto.quantidade }}</td>
+            <td>
+                <a class="btn-floating btn-sm yellow waves-effect waves-light" (click)="editar(produto.nome);">
+                    <i class="fa fa-pencil"> Editar</i> 
+                </a>  
+            </td>         
+            <td>
+                <a class="btn-floating btn-sm red waves-effect waves-light" (click)="excluir(produto.nome, i);">
+                    <i class="fa fa-minus-circle"> Excluir</i>
+                </a>
+                
+        </tr>
+    </tbody>
+    
+</table>
